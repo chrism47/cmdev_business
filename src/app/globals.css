@@ -8,8 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,6 +18,73 @@
     --foreground: #ededed;
   }
 }
+@layer utilities {
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  .typing {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(20, end), ;
+    animation-fill-mode: forwards;
+  }
+
+   @keyframes dust-blowaway {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x, -200px), var(--y, -300px)) rotate(var(--r, 0deg)) scale(0.5);
+    filter: blur(4px);
+  }
+}
+
+.dust-blowaway {
+  animation: dust-blowaway 2.5s ease-out forwards;
+}
+
+  
+
+  
+
+  @keyframes fade-slide-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: .95;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-slide-in {
+    animation: fade-slide-in 0.8s ease-in forwards;
+  }
+  @keyframes slide-in {
+    from {
+      
+      transform: translateY(60px);
+    }
+    to {
+      
+      transform: translateY(0);
+    }
+  }
+
+  .slide-in {
+    animation: slide-in 1s ease-out forwards;
+  }
+}
+
 
 body {
   background: var(--background);
