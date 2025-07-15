@@ -10,7 +10,17 @@ export default function Home() {
       {/* <div className=" bg-cover bg-[url('/ocean.png')] w-screen h-fit"> */}
 
       <main className="flex flex-col  row-start-2  sm:items-start">
-      <h1 className="font-mono typing  m-auto text-4xl ">CMDev_Business</h1>
+<div className="fixed top-20 left-1/2 transform -translate-x-1/2 max-w-md w-full bg-red-400 rounded-lg text-white text-center p-2">
+  <p>
+    This page is unfinished. Visit{' '}
+    <a href="https://www.moultonc.dev" className="underline">
+      www.moultonc.dev
+    </a>{' '}
+    or contact me via social media for more information.
+  </p>
+</div>
+
+      <h1 className="font-mono typing  text-center text-4xl ">CMDev_Business</h1>
       </main>
       {/* </div> */}
       <a className="px-3 fade-slide-in py-1.5  mt-100 rounded-full border"
