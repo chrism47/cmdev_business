@@ -19,7 +19,7 @@ export default function Home() {
     or contact me via social media for more information.
   </p>
 </div>
-
+      
       <h1 className="font-mono typing  text-center text-4xl ">CMDev_Business</h1>
       </main>
       {/* </div> */}
